@@ -27,4 +27,5 @@ class PrimeNumberTest {
         int expected = 1;
         assertThat(result).isEqualTo(expected);
     }
+
 }
