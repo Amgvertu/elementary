@@ -1,10 +1,14 @@
 package ru.loop;
 
 public class Mortgage {
+    public static double amountChange(double amount, double percent) {
+        return (amount + amount * percent / 100);
+    }
+
     public static int year(double amount, int salary, double percent) {
-        int year = 1;
-        while (amount * (1 + percent / 100) > salary) {
-            amount = amount * (1 + percent / 100) - salary;
+        int year = 0;
+        while (amountChange(amount, percent) > 0) {
+            amount = amountChange(amount, percent) - salary;
             year++;
         }
         return year;
