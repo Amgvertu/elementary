@@ -1,4 +1,4 @@
-package ru;
+package ru.array;
 
 public class ArrayDefinition {
     public static void main(String[] args) {
