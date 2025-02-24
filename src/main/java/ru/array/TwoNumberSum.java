@@ -12,15 +12,12 @@ public class TwoNumberSum {
                     flag = true;
                     break;
                 }
-
             }
             if (flag) {
                 break;
             }
         }
-        if (flag) {
-            return result;
-        } else return new int[0];
+        return (flag) ? result : new int[0];
     }
 }
 
