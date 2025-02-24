@@ -141,4 +141,19 @@ public class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    @Test
+    public void whenDataDiagMonoIsTrueThenTrue() {
+        char[][] input = {
+                {'X', ' ', ' ', ' ', 'X'},
+                {' ', 'X', ' ', ' ', 'X'},
+                {' ', ' ', 'X', ' ', 'X'},
+                {' ', ' ', ' ', 'X', 'X'},
+                {' ', ' ', ' ', ' ', 'X'}
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
+    }
+
+
+
 }
