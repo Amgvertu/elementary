@@ -17,30 +17,14 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenHas2Horizontal() {
+    public void whenHasNotMonoHorizontal() {
         char[][] input = {
-                {' ', 'X', 'X'},
-                {'X', 'X', 'X'},
-                {'X', ' ', ' '},
-                {' ', ' ', 'X'},
-                {'X', 'X', 'X'},
+                {' ', ' ', ' '},
+                {'X', ' ', 'X'},
+                {' ', ' ', ' '},
         };
-        int row = 2;
+        int row = 1;
         boolean result = MatrixCheck.monoHorizontal(input, row);
-        assertThat(result).isTrue();
-    }
-
-    @Test
-    public void whenHas3Horizontal() {
-        char[][] input = {
-                {'X', 'X', 'X'},
-                {'X', 'X', 'X'},
-                {'X', ' ', ' '},
-                {' ', ' ', 'X'},
-                {'X', 'X', 'X'},
-        };
-        int row = 3;
-        boolean result = MatrixCheck.monoHorizontal(input, row);
-        assertThat(result).isTrue();
+        assertThat(result).isFalse();
     }
 }
