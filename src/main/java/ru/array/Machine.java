@@ -10,12 +10,12 @@ public class Machine {
         int i = 0;
         money -= price;
         while (money > 0) {
+            while (money >= coins[i]) {
                 rsl[size] = coins[i];
                 money -= coins[i];
                 size++;
-            if (money < coins[i]) {
-                i++;
             }
+            i++;
         }
         return Arrays.copyOf(rsl, size);
     }
